@@ -44,7 +44,7 @@ const Filter = () => {
 
         {/* Custom File Upload */}
         <label className="file-label">
-          Choose File
+          Upload Image
           <input type="file" accept="image/*" className="custom-file-input" onChange={handleImageUpload} />
         </label>
 
