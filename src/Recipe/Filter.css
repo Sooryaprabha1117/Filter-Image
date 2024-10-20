@@ -1,0 +1,112 @@
+/* Container for the entire app */
+.image-filter-app {
+  display: flex;
+  flex-wrap: wrap; /* Allow elements to wrap onto multiple lines */
+  justify-content: space-between; /* Space between elements */
+  padding: 20px; /* Add padding around the container */
+}
+h1 {
+  font-size: 3rem; /* Larger font size for prominence */
+  font-weight: bold; /* Bold text */
+  color: #4a90e2; /* Set a nice blue color */
+  text-align: center; /* Center text alignment */
+  padding: 20px; /* Padding around text */
+  margin: 20px 0; /* Top and bottom margin */
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Text shadow for depth */
+  transition: transform 0.3s ease; 
+}
+
+/* Left side styles */
+.left-side {
+  flex: 1; /* Allow this side to grow and take available space */
+  min-width: 300px; /* Minimum width for smaller screens */
+  margin-right: 20px; /* Space between the left and right sides */
+}
+
+/* Right side styles */
+.right-side {
+  flex: 1; /* Allow this side to grow and take available space */
+  min-width: 300px; /* Minimum width for smaller screens */
+}
+
+/* Custom file input styles */
+.custom-file-input {
+  display: none; /* Hide the default file input */
+}
+
+.file-label {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #2196f3; /* Blue background */
+  color: white; /* White text color */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s; /* Smooth transition */
+  margin-bottom: 20px; /* Space below the button */
+}
+
+.file-label:hover {
+  background-color: #1976d2; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Filter button styles */
+.filter-buttons {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 10px; /* Space between buttons */
+}
+
+.filter-button {
+  padding: 10px; /* Add padding for buttons */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  color: white; /* Text color */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.filter-button.brightness {
+  background-color: #ff9800; /* Orange */
+}
+
+.filter-button.brightness:hover {
+  background-color: #fb8c00; /* Darker orange on hover */
+}
+
+.filter-button.contrast {
+  background-color: #f44336; /* Red */
+}
+
+.filter-button.contrast:hover {
+  background-color: #e53935; /* Darker red on hover */
+}
+
+.filter-button.hue {
+  background-color: #3f51b5; /* Indigo */
+}
+
+.filter-button.hue:hover {
+  background-color: #3949ab; /* Darker indigo on hover */
+}
+
+.filter-button.grayscale {
+  background-color: #4caf50; /* Green */
+}
+
+.filter-button.grayscale:hover {
+  background-color: #43a047; /* Darker green on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .image-filter-app {
+    flex-direction: column; /* Stack left and right sides vertically */
+  }
+
+  .left-side {
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 20px; /* Add space below */
+  }
+}
